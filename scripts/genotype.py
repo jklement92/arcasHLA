@@ -697,8 +697,8 @@ if __name__ == '__main__':
        
     # Checks if HLA reference exists
     import zipfile
-    zip_file_path = 'hla.dat.zip'
-    extract_to_directory = 'hla.dat'
+    zip_file_path = rootDir + 'dat/IMGTHLA/' +'hla.dat.zip'
+    extract_to_directory = 'dat/IMGTHLA/hla.dat'
     with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
         zip_ref.extractall(extract_to_directory)
       
