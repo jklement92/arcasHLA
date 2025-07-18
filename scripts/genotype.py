@@ -696,6 +696,12 @@ if __name__ == '__main__':
     prior = prior.set_index('allele').to_dict('index')
        
     # Checks if HLA reference exists
+    import zipfile
+    zip_file_path = 'hla.dat.zip'
+    extract_to_directory = 'hla.dat'
+    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_to_directory)
+      
     check_path(rootDir + 'dat/ref')
     check_ref()
     
